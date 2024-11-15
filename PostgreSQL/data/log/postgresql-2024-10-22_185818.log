@@ -1,0 +1,26 @@
+2024-10-22 18:58:18.968 PDT [4048] LOG:  database system was interrupted; last known up at 2024-10-22 22:14:19 PDT
+2024-10-22 19:00:41.125 PDT [4692] FATAL:  the database system is starting up
+2024-10-22 19:00:41.203 PDT [3516] FATAL:  the database system is starting up
+2024-10-22 19:00:55.171 PDT [4048] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-10-22 19:00:55.261 PDT [4048] LOG:  redo starts at 0/789C0A0
+2024-10-22 19:00:55.263 PDT [4048] LOG:  invalid record length at 0/789C0D8: wanted 24, got 0
+2024-10-22 19:00:55.266 PDT [4048] LOG:  redo done at 0/789C0A0
+2024-10-22 19:00:56.099 PDT [3436] LOG:  database system is ready to accept connections
+2024-10-22 20:44:29.803 PDT [5840] ERROR:  could not serialize access due to concurrent update
+2024-10-22 20:44:29.803 PDT [5840] STATEMENT:  DELETE FROM ir_attachment WHERE id IN (
+	            SELECT id FROM ir_attachment WHERE id in (285) FOR NO KEY UPDATE SKIP LOCKED
+	        )
+2024-10-22 20:44:32.220 PDT [1372] ERROR:  could not serialize access due to concurrent update
+2024-10-22 20:44:32.220 PDT [1372] STATEMENT:  DELETE FROM ir_attachment WHERE id IN (
+	            SELECT id FROM ir_attachment WHERE id in (285) FOR NO KEY UPDATE SKIP LOCKED
+	        )
+2024-10-22 20:44:51.680 PDT [5364] ERROR:  could not serialize access due to concurrent update
+2024-10-22 20:44:51.680 PDT [5364] STATEMENT:  DELETE FROM ir_attachment WHERE id IN (
+	            SELECT id FROM ir_attachment WHERE id in (287, 286) FOR NO KEY UPDATE SKIP LOCKED
+	        )
+2024-10-22 20:44:52.414 PDT [4352] ERROR:  could not serialize access due to concurrent update
+2024-10-22 20:44:52.414 PDT [4352] STATEMENT:  DELETE FROM ir_attachment WHERE id IN (
+	            SELECT id FROM ir_attachment WHERE id in (287, 286) FOR NO KEY UPDATE SKIP LOCKED
+	        )
+2024-10-22 22:14:37.353 PDT [5372] ERROR:  could not serialize access due to concurrent update
+2024-10-22 22:14:37.353 PDT [5372] STATEMENT:  UPDATE "bus_presence" SET "last_poll" = '2024-10-23 05:14:37', "last_presence" = '2024-10-23 04:45:59.220055', "status" = 'online' WHERE id IN (1)

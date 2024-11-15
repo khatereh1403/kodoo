@@ -1,0 +1,29 @@
+2024-10-22 21:50:35.177 PDT [3940] ERROR:  could not serialize access due to concurrent update
+2024-10-22 21:50:35.177 PDT [3940] STATEMENT:  DELETE FROM ir_attachment WHERE id IN (
+	            SELECT id FROM ir_attachment WHERE id in (20, 19, 18) FOR NO KEY UPDATE SKIP LOCKED
+	        )
+2024-10-22 22:03:31.504 PDT [7956] ERROR:  null value in column "model_id" violates not-null constraint
+2024-10-22 22:03:31.504 PDT [7956] DETAIL:  Failing row contains (803, null, 1, 2, 2, persian.language.import, t, t, t, t, t, 2024-10-23 05:03:29.519498, 2024-10-23 05:03:29.519498).
+2024-10-22 22:03:31.504 PDT [7956] STATEMENT:  INSERT INTO "ir_model_access" ("active", "create_date", "create_uid", "group_id", "name", "perm_create", "perm_read", "perm_unlink", "perm_write", "write_date", "write_uid") VALUES (true, '2024-10-23 05:03:29.519498', 2, 1, 'persian.language.import', true, true, true, true, '2024-10-23 05:03:29.519498', 2) RETURNING "id"
+2024-10-22 22:03:31.526 PDT [7956] ERROR:  null value in column "model_id" violates not-null constraint
+2024-10-22 22:03:31.526 PDT [7956] DETAIL:  Failing row contains (804, null, 1, 2, 2, persian.language.import, t, t, t, t, t, 2024-10-23 05:03:29.519498, 2024-10-23 05:03:29.519498).
+2024-10-22 22:03:31.526 PDT [7956] STATEMENT:  INSERT INTO "ir_model_access" ("active", "create_date", "create_uid", "group_id", "name", "perm_create", "perm_read", "perm_unlink", "perm_write", "write_date", "write_uid") VALUES (true, '2024-10-23 05:03:29.519498', 2, 1, 'persian.language.import', true, true, true, true, '2024-10-23 05:03:29.519498', 2) RETURNING "id"
+2024-10-22 22:05:37.350 PDT [7508] ERROR:  could not serialize access due to concurrent update
+2024-10-22 22:05:37.350 PDT [7508] STATEMENT:  UPDATE "bus_presence" SET "status" = 'offline' WHERE id IN (1)
+2024-10-22 22:06:23.193 PDT [2412] ERROR:  could not serialize access due to concurrent update
+2024-10-22 22:06:23.193 PDT [2412] STATEMENT:  UPDATE "bus_presence" SET "last_poll" = '2024-10-23 05:06:22', "last_presence" = '2024-10-23 05:03:45.648460', "status" = 'online' WHERE id IN (1)
+2024-10-22 22:08:40.151 PDT [2412] ERROR:  could not serialize access due to concurrent update
+2024-10-22 22:08:40.151 PDT [2412] STATEMENT:  UPDATE "bus_presence" SET "status" = 'offline' WHERE id IN (1)
+2024-10-22 22:12:47.007 PDT [7988] LOG:  received fast shutdown request
+2024-10-22 22:12:47.018 PDT [6912] ERROR:  canceling statement due to user request
+2024-10-22 22:12:47.046 PDT [7988] LOG:  aborting any active transactions
+2024-10-22 22:12:47.078 PDT [5188] FATAL:  terminating connection due to administrator command
+2024-10-22 22:12:47.079 PDT [6356] FATAL:  terminating connection due to administrator command
+2024-10-22 22:12:47.106 PDT [7208] FATAL:  terminating connection due to administrator command
+2024-10-22 22:12:47.121 PDT [5260] FATAL:  terminating connection due to administrator command
+2024-10-22 22:12:47.136 PDT [7944] FATAL:  terminating connection due to administrator command
+2024-10-22 22:12:47.161 PDT [7580] FATAL:  terminating connection due to administrator command
+2024-10-22 22:12:47.171 PDT [7988] LOG:  background worker "logical replication launcher" (PID 6912) exited with exit code 1
+2024-10-22 22:12:47.176 PDT [1928] FATAL:  terminating connection due to administrator command
+2024-10-22 22:12:47.207 PDT [2276] LOG:  shutting down
+2024-10-22 22:12:47.642 PDT [7988] LOG:  database system is shut down

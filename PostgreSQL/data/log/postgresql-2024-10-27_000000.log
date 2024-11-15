@@ -1,0 +1,12 @@
+2024-10-27 20:05:53.793 PDT [5824] ERROR:  could not serialize access due to concurrent update
+2024-10-27 20:05:53.793 PDT [5824] STATEMENT:  DELETE FROM ir_attachment WHERE id IN (
+	            SELECT id FROM ir_attachment WHERE id in (282, 281, 280) FOR NO KEY UPDATE SKIP LOCKED
+	        )
+2024-10-27 20:06:10.599 PDT [1548] ERROR:  could not serialize access due to concurrent update
+2024-10-27 20:06:10.599 PDT [1548] STATEMENT:  DELETE FROM ir_attachment WHERE id IN (
+	            SELECT id FROM ir_attachment WHERE id in (145) FOR NO KEY UPDATE SKIP LOCKED
+	        )
+2024-10-27 20:08:18.785 PDT [1548] ERROR:  could not serialize access due to concurrent update
+2024-10-27 20:08:18.785 PDT [1548] STATEMENT:  UPDATE "bus_presence" SET "last_poll" = '2024-10-28 03:08:18', "last_presence" = '2024-10-28 03:08:11.279316', "status" = 'online' WHERE id IN (1)
+2024-10-27 20:10:45.048 PDT [5924] ERROR:  could not serialize access due to concurrent update
+2024-10-27 20:10:45.048 PDT [5924] STATEMENT:  UPDATE "res_users" SET "odoobot_state" = 'onboarding_emoji', "write_date" = '2024-10-28 03:10:44.631894', "write_uid" = 6 WHERE id IN (6)
